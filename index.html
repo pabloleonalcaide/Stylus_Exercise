@@ -21,23 +21,41 @@
 			<h4>Web Developer</h4>
 		</div>
 	</header>
-	<nav>
-		<a href="#" title="about"><i class="material-icons">menu</i> About Me</a>
-		<a href="#" title="education"><i class="material-icons">menu</i> Educacion</a>
-		<a href="#" title="skills"><i class="material-icons">menu</i> Skills</a>
-		<a href="#" title="proyectos"><i class="material-icons">menu</i> Proyectos</a>
-		<a href="#" title="contactos"><i class="material-icons">menu</i> Contacto</a>
-	</nav>
+	<ul id="slide" class="side-nav">
+		<li><a href="#" title="about"><i class="material-icons">menu</i> About Me</a></li>
+		<li><a href="#" title="education"><i class="material-icons">menu</i> Educacion</a></li>
+		<li><a href="#" title="skills"><i class="material-icons">menu</i> Skills</a></li>
+		<li><a href="#" title="proyectos"><i class="material-icons">menu</i> Proyectos</a></li>
+		<li><a href="#" title="contactos"><i class="material-icons">menu</i> Contacto</a></li>
+	</ul>
 	<main>
+	<figure>
+		<img id="mainImage" src="./images/main.png">
+	</figure>
+	<figure>
+		<img id="profilePhoto" src="./images/profilePhoto.jpg">
+	</figure>
 	<section id="aboutme">
-		<header>
-			About Me
-		</header>
+		<header> <h4>About Me</h4> <i class="material-icons">person</i></header>
+		
+		<p>Mi nombre es Pablo, Desarrollo aplicaciones y sitios web</p>
+		<p>Considero que cada uno de éstos es un pequeño paso para ayudar a otros y mejorar todo lo que nos rodea </p>
 	</section>
 	<section id="education">
 		<header>
-			Formación
+			<h4>Formación</h4><i class="material-icons">school</i>
 		</header>
+		<ul id="eduList1" class="eduList"><i class="material-icons">group</i>
+		<li>Graduado en Psicología</li>
+		<li>Mención en Psi. Cĺínica</li>
+		<li><b>UNED (Madrid) - 2016 </b> </li>
+		</ul>
+		<ul id="eduList2" class="eduList"><i class="material-icons">developer_mode</i>
+		<li>Técnico Superior en</li>
+		<li>Desarrollo de Apps. Web</li>
+		<li><b>I.E.S Gran Capitán (Córdoba) - 2018 </b> </li>
+		</ul>
+
 	</section>
 	<section id="skills">
 		<header>
@@ -59,7 +77,7 @@
 	</section>	
 	</main>
 	<footer>
-			<a id="arrow" href="#mainHeader" title="Subir"><i class="material-icons">backup</i></a>
+			<a id="arrow" href="#mainHeader" title="Subir"><i class="material-icons">home</i></a>
 			<span>&#169 2018 Pablo León Alcaide</span>
 	</footer>
 </body>
