@@ -1,42 +1,86 @@
+@font-face {
+  font-family: 'ananda';
+  src: url('../fonts/ananda.ttf') format('ttf');
+}
+
 body
-	
+	font-size 14px
+	font-family ananda
+	display grid
+	grid-template-columns 1fr
 a
 	text-decoration none
 	color #c4c4c4
 header
-	display flex
-	flex-direction row
-	justify-content space-around
 	color #f4f4f4
 	background-color: #222222
 	margin-bottom 5px
-#menuLink
-	vertical-align top
+
+main
+	figure
+		margin 0
+		text-align center
 		
+#mainHeader
+	position fixed
+	top 0
+	width 100%
+	display flex 
+	flex-direction row
+	justify-content space-between
+
 #headerTitle
 	display inline-block
 	h3
-		margin-top 0
-		margin-bottom 0
 	h4
-		margin-top 5px
-		
-nav
-	display flex
-	flex-direction column
+		display inline-block
+		margin-right 10px
+
+#slide
 	position fixed
 	top 0
-	background-color blue
-	left -140px
-	transition 3s
-	a
-		background-color #222222
-		color #d4d4d4
-		
+	left -130px
+	list-style none
+	padding 0
+	li
+		margin 10px
+		border-bottom 1px solid #444444
+		&:hover
+			border-left 1px solid blue		
+
+#mainImage
+	margin-top 40px
+	width:100%
+	height: auto
+	
+#profilePhoto
+	width 90px
+	height auto
+	border-radius 50px
+	margin auto
+section
+	margin 5px
+	font-size 1.4rem
+	box-shadow 0 4px 8px 0 rgba(0,0,0,0.2);
+	border-radius 5px
+	padding 2px
+	header
+		padding 5px	
+		display flex
+		justify-content space-between
+		h4
+			display inline
+			margin 0
+		i
+			vertical-align middle
+			text-align right	
+
+.eduList
+	font-size 0.9rem
+	list-style none
+	text-align center
+	padding-left 0
 footer
-	position fixed
-	bottom 0
-	width 100%
 	text-align center
 	background-color #222222
 	#arrow
@@ -49,5 +93,4 @@ footer
 			padding-top 10px
 			border-radius 50px
 			background linear-gradient(#444444, #222222 )
-		&:hover
-			height 25px
+		
