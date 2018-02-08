@@ -20,7 +20,9 @@ main
 	figure
 		margin 0
 		text-align center
-		
+		width 100%
+		img 
+			width 100%
 #mainHeader
 	position fixed
 	top 0
@@ -47,23 +49,27 @@ main
 		border-bottom 1px solid #444444
 		&:hover
 			border-left 1px solid blue		
-
+main
+	background-color #57C6D4
 #mainImage
 	margin-top 40px
-	width:100%
-	height: auto
+	width 100%
+	height auto
 	
 #profilePhoto
 	width 90px
 	height auto
 	border-radius 50px
 	margin auto
+
 section
+	background-color #f4f4f4
 	margin 5px
 	font-size 1.4rem
 	box-shadow 0 4px 8px 0 rgba(0,0,0,0.2);
 	border-radius 5px
-	padding 2px
+	
+
 	header
 		padding 5px	
 		display flex
@@ -80,6 +86,19 @@ section
 	list-style none
 	text-align center
 	padding-left 0
+	
+#skills
+	text-align center
+	ul
+		list-style none
+		display inline-block
+		font-size 0.9rem
+		line-height 1.6
+		
+		li
+			text-align left
+			&:nth-child(odd)
+				color #828282
 footer
 	text-align center
 	background-color #222222

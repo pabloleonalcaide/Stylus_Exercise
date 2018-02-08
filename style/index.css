@@ -20,6 +20,10 @@ header {
 main figure {
   margin: 0;
   text-align: center;
+  width: 100%;
+}
+main figure img {
+  width: 100%;
 }
 #mainHeader {
   position: fixed;
@@ -51,6 +55,9 @@ main figure {
 #slide li:hover {
   border-left: 1px solid #00f;
 }
+main {
+  background-color: #57c6d4;
+}
 #mainImage {
   margin-top: 40px;
   width: 100%;
@@ -63,11 +70,11 @@ main figure {
   margin: auto;
 }
 section {
+  background-color: #f4f4f4;
   margin: 5px;
   font-size: 1.4rem;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 5px;
-  padding: 2px;
 }
 section header {
   padding: 5px;
@@ -87,6 +94,21 @@ section header i {
   list-style: none;
   text-align: center;
   padding-left: 0;
+}
+#skills {
+  text-align: center;
+}
+#skills ul {
+  list-style: none;
+  display: inline-block;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+#skills ul li {
+  text-align: left;
+}
+#skills ul li:nth-child(odd) {
+  color: #828282;
 }
 footer {
   text-align: center;
