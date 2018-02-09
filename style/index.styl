@@ -1,19 +1,20 @@
-@font-face {
-  font-family: 'ananda';
-  src: url('../fonts/ananda.ttf') format('ttf');
-}
+
+@font-face 
+  font-family 'ananda';
+  src url('../fonts/ananda.ttf') format('ttf');
 
 body
+	opacity 0.9
 	font-size 14px
 	font-family ananda
 	display grid
-	grid-template-columns 1fr
+	grid-template-columns 100%
 a
 	text-decoration none
 	color #c4c4c4
 header
 	color #f4f4f4
-	background-color: #222222
+	background-color #222222
 	margin-bottom 5px
 
 main
@@ -51,7 +52,8 @@ main
 			border-left 1px solid blue		
 main
 	background-color #57C6D4
-#mainImage
+
+#firstImage
 	margin-top 40px
 	width 100%
 	height auto
@@ -64,11 +66,10 @@ main
 
 section
 	background-color #f4f4f4
-	margin 5px
+	margin 5px auto
 	font-size 1.4rem
 	box-shadow 0 4px 8px 0 rgba(0,0,0,0.2);
 	border-radius 5px
-	
 
 	header
 		padding 5px	
@@ -80,11 +81,11 @@ section
 		i
 			vertical-align middle
 			text-align right	
-
-.eduList
+#education
 	font-size 0.9rem
-	list-style none
 	text-align center
+.eduList
+	list-style none
 	padding-left 0
 	
 #skills
@@ -99,17 +100,50 @@ section
 			text-align left
 			&:nth-child(odd)
 				color #828282
+#projects
+	figure
+		display block
+		width 70%
+		margin auto
 footer
 	text-align center
 	background-color #222222
 	#arrow
 		display block
-		transition 5s
+		transition 1s
 		width 100%
 		margin-bottom 10px
 		background linear-gradient(#444444, #222222 )
+		&:hover
+			transform: translateY(-10px);
 		i 
 			padding-top 10px
 			border-radius 50px
 			background linear-gradient(#444444, #222222 )
-		
+
+
+figcaption 
+	font-size 14px
+	color #0288D1
+	a
+	    display: inline-block;
+	    text-decoration: none;
+		&:hover
+	    	color: #fff
+		&::after
+		    content: '';
+		    display: block;
+		    width: 0;
+		    height: 2px;
+		    background: #0288D1;
+		    transition: width .3s;
+
+		&:hover::after
+	    	width: 100%;
+#rrss
+	display grid
+	grid-template-columns 60px 60px
+	justify-content space-around
+.rrssIco
+	border-radius 50px
+	width 60px
