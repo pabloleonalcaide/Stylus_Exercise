@@ -56,28 +56,51 @@ main figure img {
 #slide li:hover {
   border-left: 1px solid #00f;
 }
-main {
-  background-color: #57c6d4;
-}
-#firstImage {
-  margin-top: 40px;
+.image {
+  background-image: url("../images/main.jpg");
+  background-attachment: fixed;
   width: 100%;
-  height: auto;
+  height: 200px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow: scroll;
 }
-#profilePhoto {
-  width: 90px;
-  height: auto;
-  border-radius: 50px;
-  margin: auto;
+#imageUp {
+  font-size: 1.2rem;
+  color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 section {
-  background-color: #f4f4f4;
+  width: 95%;
   margin: 5px auto;
   font-size: 1.4rem;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 5px;
 }
+section box-shadow 0 10px 20px rgba(0,
+section 0,
+section 0.19),
+section 0 6px 6px rgba(0,
+section 0.23) {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+section box-shadow 0 10px 20px rgba(0:hover,
+section 0:hover,
+section 0.19):hover,
+section 0 6px 6px rgba(0:hover,
+section 0.23):hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+section >figure {
+  background-attachment: fixed;
+  overflow: scroll;
+}
+section >figure img {
+  height: 100%;
+}
 section header {
+  border-radius: 5px 5px 0 0;
   padding: 5px;
   display: flex;
   justify-content: space-between;
@@ -90,9 +113,39 @@ section header i {
   vertical-align: middle;
   text-align: right;
 }
+#aboutme header {
+  background-color: #03a9f4;
+  color: #212121;
+}
+#profilePhoto {
+  width: 90px;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 8px;
+  border: 1px solid #d4d4d4;
+}
+#profilePhoto box-shadow 0 10px 20px rgba(0:hover,
+#profilePhoto 0:hover,
+#profilePhoto 0.19):hover,
+#profilePhoto 0 6px 6px rgba(0:hover,
+#profilePhoto 0.23):hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
 #education {
-  font-size: 0.9rem;
   text-align: center;
+}
+#education header {
+  background-color: #7b1fa2;
+}
+#education ul,
+#education p {
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 480px) {
+  #education ul {
+    display: inline-block;
+    margin: 5px;
+  }
 }
 .eduList {
   list-style: none;
@@ -100,6 +153,12 @@ section header i {
 }
 #skills {
   text-align: center;
+}
+#skills header {
+  background-color: #4caf50;
+}
+#skills img {
+  display: none;
 }
 #skills ul {
   list-style: none;
@@ -113,10 +172,21 @@ section header i {
 #skills ul li:nth-child(odd) {
   color: #828282;
 }
+#projects {
+  text-align: center;
+}
 #projects figure {
   display: block;
-  width: 70%;
+  width: 40%;
   margin: auto;
+}
+@media screen and (min-width: 480px) {
+  #projects figure {
+    display: inline-block;
+  }
+}
+#contact header {
+  background-color: #f44336;
 }
 footer {
   text-align: center;
@@ -146,10 +216,10 @@ figcaption a {
   text-decoration: none;
 }
 figcaption:hover {
-  color: #fff;
+  color: #000fff;
 }
 figcaption::after {
-  content: '';
+  content: '	';
   display: block;
   width: 0;
   height: 2px;
@@ -165,6 +235,30 @@ figcaption:hover::after {
   justify-content: space-around;
 }
 .rrssIco {
+  margin: 5px;
   border-radius: 50px;
   width: 60px;
+}
+.underline {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+}
+.underline:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: -5px;
+  background: #0288d1;
+  height: 4px;
+  transition-property: left right;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-out;
+}
+.underline:hover:after,
+.underline:focus:after,
+.underline:active:after {
+  right: 0;
 }
