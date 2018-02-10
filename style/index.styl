@@ -1,26 +1,29 @@
-@font-face {
-  font-family: 'ananda';
-  src: url('../fonts/ananda.ttf') format('ttf');
-}
+
+@font-face 
+  font-family 'ananda';
+  src url('../fonts/ananda.ttf') format('ttf');
 
 body
+	opacity 0.9
 	font-size 14px
 	font-family ananda
 	display grid
-	grid-template-columns 1fr
+	grid-template-columns 100%
 a
 	text-decoration none
 	color #c4c4c4
 header
 	color #f4f4f4
-	background-color: #222222
+	background-color #222222
 	margin-bottom 5px
 
-main
+main	
 	figure
 		margin 0
 		text-align center
-		
+		width 100%
+		img 
+			width 100%
 #mainHeader
 	position fixed
 	top 0
@@ -48,23 +51,38 @@ main
 		&:hover
 			border-left 1px solid blue		
 
-#mainImage
-	margin-top 40px
-	width:100%
-	height: auto
+.image
 	
-#profilePhoto
-	width 90px
-	height auto
-	border-radius 50px
-	margin auto
+	background-image url("../images/main.jpg")
+	background-attachment fixed
+	width 100%
+	height 200px
+	background-size 100%
+	background-repeat no-repeat
+	overflow scroll	
+#imageUp
+	font-size 1.2rem
+	color #f4f4f4
+	display flex
+	align-items center
+	justify-content flex-end
 section
-	margin 5px
+	width 95%
+	margin 5px auto
 	font-size 1.4rem
-	box-shadow 0 4px 8px 0 rgba(0,0,0,0.2);
 	border-radius 5px
-	padding 2px
+	box-shadow 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+    transition all 0.3s cubic-bezier(.25,.8,.25,1)
+    
+    &:hover
+    	 box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+	>figure
+		background-attachment fixed
+		overflow scroll
+		img 
+			height 100%
 	header
+		border-radius 5px 5px 0 0
 		padding 5px	
 		display flex
 		justify-content space-between
@@ -74,23 +92,131 @@ section
 		i
 			vertical-align middle
 			text-align right	
+#aboutme
+	header
+		background-color #03A9F4
+		color #212121
+	
+	
+#profilePhoto
+	width 90px
+	height auto
+	border-radius 10px
+	margin-top 8px
+	border 1px solid #d4d4d4
+	box-shadow 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+    
+    &:hover
+    	 box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+#education
+	text-align center
+	header
+		background-color #7B1FA2
+	ul
+	p 
+		font-size 0.8rem
+		
+	ul
+		@media screen and (min-width: 480px)
+	  		display inline-block
+	  		margin 5px
 
 .eduList
-	font-size 0.9rem
 	list-style none
-	text-align center
 	padding-left 0
+	
+#skills
+	text-align center
+	header
+		background-color #4CAF50
+	img
+		display none
+	ul
+		list-style none
+		display inline-block
+		font-size 0.9rem
+		line-height 1.6
+	
+		li
+			text-align left
+			&:nth-child(odd)
+				color #828282
+#projects
+	text-align center
+	figure
+		display block
+		width 40%
+		margin auto
+		@media screen and (min-width: 480px)
+			display inline-block
+			
+
+#contact
+	header
+		background-color #F44336
 footer
 	text-align center
 	background-color #222222
 	#arrow
 		display block
-		transition 5s
+		transition 1s
 		width 100%
 		margin-bottom 10px
 		background linear-gradient(#444444, #222222 )
+		&:hover
+			transform: translateY(-10px);
 		i 
 			padding-top 10px
 			border-radius 50px
 			background linear-gradient(#444444, #222222 )
-		
+
+// EFECTOS
+
+figcaption 
+	font-size 14px
+	color #0288D1
+	a
+	    display: inline-block
+	    text-decoration: none
+		&:hover
+	    	color: #000fff
+		&::after
+		    content: '	'
+		    display: block
+		    width: 0
+		    height: 2px
+		    background: #0288D1
+		    transition: width .3s
+
+		&:hover::after
+	    	width: 100%
+#rrss
+	display grid
+	grid-template-columns 60px 60px
+	justify-content space-around
+.rrssIco
+	margin 5px
+	border-radius 50px
+	width 60px
+.underline
+  display: inline
+  position: relative
+  overflow: hidden
+
+.underline:after
+  content: ""
+  position: absolute
+  z-index: -1
+  left: 0
+  right: 100%
+  bottom: -5px
+  background: #0288D1
+  height: 4px
+  transition-property: left right
+  transition-duration: 0.8s
+  transition-timing-function: ease-out
+
+.underline:hover:after
+.underline:focus:after
+.underline:active:after
+  right: 0;

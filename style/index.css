@@ -3,10 +3,11 @@
   src: url("../fonts/ananda.ttf") format('ttf');
 }
 body {
+  opacity: 0.9;
   font-size: 14px;
   font-family: ananda;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
 }
 a {
   text-decoration: none;
@@ -20,6 +21,10 @@ header {
 main figure {
   margin: 0;
   text-align: center;
+  width: 100%;
+}
+main figure img {
+  width: 100%;
 }
 #mainHeader {
   position: fixed;
@@ -51,25 +56,51 @@ main figure {
 #slide li:hover {
   border-left: 1px solid #00f;
 }
-#mainImage {
-  margin-top: 40px;
+.image {
+  background-image: url("../images/main.jpg");
+  background-attachment: fixed;
   width: 100%;
-  height: auto;
+  height: 200px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow: scroll;
 }
-#profilePhoto {
-  width: 90px;
-  height: auto;
-  border-radius: 50px;
-  margin: auto;
+#imageUp {
+  font-size: 1.2rem;
+  color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 section {
-  margin: 5px;
+  width: 95%;
+  margin: 5px auto;
   font-size: 1.4rem;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 5px;
-  padding: 2px;
+}
+section box-shadow 0 10px 20px rgba(0,
+section 0,
+section 0.19),
+section 0 6px 6px rgba(0,
+section 0.23) {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+section box-shadow 0 10px 20px rgba(0:hover,
+section 0:hover,
+section 0.19):hover,
+section 0 6px 6px rgba(0:hover,
+section 0.23):hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+section >figure {
+  background-attachment: fixed;
+  overflow: scroll;
+}
+section >figure img {
+  height: 100%;
 }
 section header {
+  border-radius: 5px 5px 0 0;
   padding: 5px;
   display: flex;
   justify-content: space-between;
@@ -82,11 +113,80 @@ section header i {
   vertical-align: middle;
   text-align: right;
 }
-.eduList {
-  font-size: 0.9rem;
-  list-style: none;
+#aboutme header {
+  background-color: #03a9f4;
+  color: #212121;
+}
+#profilePhoto {
+  width: 90px;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 8px;
+  border: 1px solid #d4d4d4;
+}
+#profilePhoto box-shadow 0 10px 20px rgba(0:hover,
+#profilePhoto 0:hover,
+#profilePhoto 0.19):hover,
+#profilePhoto 0 6px 6px rgba(0:hover,
+#profilePhoto 0.23):hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+#education {
   text-align: center;
+}
+#education header {
+  background-color: #7b1fa2;
+}
+#education ul,
+#education p {
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 480px) {
+  #education ul {
+    display: inline-block;
+    margin: 5px;
+  }
+}
+.eduList {
+  list-style: none;
   padding-left: 0;
+}
+#skills {
+  text-align: center;
+}
+#skills header {
+  background-color: #4caf50;
+}
+#skills img {
+  display: none;
+}
+#skills ul {
+  list-style: none;
+  display: inline-block;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+#skills ul li {
+  text-align: left;
+}
+#skills ul li:nth-child(odd) {
+  color: #828282;
+}
+#projects {
+  text-align: center;
+}
+#projects figure {
+  display: block;
+  width: 40%;
+  margin: auto;
+}
+@media screen and (min-width: 480px) {
+  #projects figure {
+    display: inline-block;
+  }
+}
+#contact header {
+  background-color: #f44336;
 }
 footer {
   text-align: center;
@@ -94,13 +194,71 @@ footer {
 }
 footer #arrow {
   display: block;
-  transition: 5s;
+  transition: 1s;
   width: 100%;
   margin-bottom: 10px;
   background: linear-gradient(#444, #222);
+}
+footer #arrow:hover {
+  transform: translateY(-10px);
 }
 footer #arrow i {
   padding-top: 10px;
   border-radius: 50px;
   background: linear-gradient(#444, #222);
+}
+figcaption {
+  font-size: 14px;
+  color: #0288d1;
+}
+figcaption a {
+  display: inline-block;
+  text-decoration: none;
+}
+figcaption:hover {
+  color: #000fff;
+}
+figcaption::after {
+  content: '	';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #0288d1;
+  transition: width 0.3s;
+}
+figcaption:hover::after {
+  width: 100%;
+}
+#rrss {
+  display: grid;
+  grid-template-columns: 60px 60px;
+  justify-content: space-around;
+}
+.rrssIco {
+  margin: 5px;
+  border-radius: 50px;
+  width: 60px;
+}
+.underline {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+}
+.underline:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: -5px;
+  background: #0288d1;
+  height: 4px;
+  transition-property: left right;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-out;
+}
+.underline:hover:after,
+.underline:focus:after,
+.underline:active:after {
+  right: 0;
 }
