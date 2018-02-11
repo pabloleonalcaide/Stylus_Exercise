@@ -10,33 +10,37 @@
 	<link rel="stylesheet" href="./style/index.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/portfolio.js" type="text/javascript" charset="utf-8"></script>
 	<title>Pablo León</title>
 	
 </head>
 <body>
 	<header id="mainHeader">
-		<a href="#" title="Menu" id="menuLink"><i class="material-icons">menu</i></a>
 		<div id="headerTitle">
 			<h3>Pablo León</h3>
 			<h4>Web Developer</h4>
 		</div>
+		<a href="#" title="Menu" id="menuLink"><i class="material-icons">more_horiz</i></a>
 	</header>
+<nav>
 	<ul id="slide" class="side-nav">
-		<li><a href="#" title="about"><i class="material-icons">menu</i> About Me</a></li>
-		<li><a href="#" title="education"><i class="material-icons">menu</i> Educacion</a></li>
-		<li><a href="#" title="skills"><i class="material-icons">menu</i> Skills</a></li>
-		<li><a href="#" title="proyectos"><i class="material-icons">menu</i> Proyectos</a></li>
-		<li><a href="#" title="contactos"><i class="material-icons">menu</i> Contacto</a></li>
+		<li><a class="navLink" href="#aboutme" title="about"><i class="material-icons">person</i> About Me</a></li>
+		<li><a class="navLink" href="#education" title="education"><i class="material-icons">school</i> Educacion</a></li>
+		<li><a class="navLink" href="#skills" title="skills"><i class="material-icons">tune</i> Skills</a></li>
+		<li><a class="navLink" href="#projects" title="proyectos"><i class="material-icons">assignment_turned_in</i> Proyectos</a></li>
+		<li><a class="navLink" href="#contact" title="contactos"><i class="material-icons">message</i> Contacto</a></li>
 	</ul>
+</nav>
 	<main>
 		<div class="image" id="imageUp">
 			<p>Improve Yourself<br>For Improve the World</p>
 		</div>
 	<section id="aboutme">
 		<header> <h4>About Me</h4> <i class="material-icons">person</i></header>
-	<figure>
 		<img id="profilePhoto" src="./images/profilePhoto.jpg">
-	</figure>
+	
 		<p>Mi nombre es <span class="underline">Pablo</span>, Desarrollo aplicaciones y sitios web</p>
 		<p>Considero que cada uno de éstos es un pequeño paso para ayudar a otros y mejorar todo lo que nos rodea </p>
 	</section>

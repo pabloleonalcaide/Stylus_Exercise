@@ -42,19 +42,8 @@ main figure img {
   display: inline-block;
   margin-right: 10px;
 }
-#slide {
-  position: fixed;
-  top: 0;
-  left: -130px;
-  list-style: none;
-  padding: 0;
-}
-#slide li {
-  margin: 10px;
-  border-bottom: 1px solid #444;
-}
-#slide li:hover {
-  border-left: 1px solid #00f;
+#menuLink i {
+  font-size: 40px;
 }
 .image {
   background-image: url("../images/main.jpg");
@@ -118,10 +107,13 @@ section header i {
   color: #212121;
 }
 #profilePhoto {
+  display: block;
   width: 90px;
   height: auto;
+  text-align: center;
   border-radius: 10px;
   margin-top: 8px;
+  margin: auto;
   border: 1px solid #d4d4d4;
 }
 #profilePhoto box-shadow 0 10px 20px rgba(0:hover,
@@ -261,4 +253,57 @@ figcaption:hover::after {
 .underline:focus:after,
 .underline:active:after {
   right: 0;
+}
+nav {
+  margin: 20px auto;
+  background: #373737;
+  width: 80%;
+  height: 100%;
+  left: -100%;
+  margin: 0;
+  position: fixed;
+}
+@media screen and (min-width: 480px) {
+  nav {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 700px) {
+  nav {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 800px) {
+  nav {
+    width: 20%;
+  }
+}
+nav ul {
+  overflow: hidden;
+  list-style: none;
+}
+nav ul li a {
+  color: #fff;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  background: #171717;
+}
+nav ul li a:hover i {
+  vertical-align: middle;
+}
+nav ul li span {
+  margin-right: 10px;
+}
+nav nav {
+  display: block;
+  float: none;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+nav #mainHeader {
+  display: block;
+  width: 100%;
+  background: #ccc;
 }

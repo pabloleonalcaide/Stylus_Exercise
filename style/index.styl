@@ -38,21 +38,10 @@ main
 	h4
 		display inline-block
 		margin-right 10px
-
-#slide
-	position fixed
-	top 0
-	left -130px
-	list-style none
-	padding 0
-	li
-		margin 10px
-		border-bottom 1px solid #444444
-		&:hover
-			border-left 1px solid blue		
-
+#menuLink
+	i
+		font-size 40px
 .image
-	
 	background-image url("../images/main.jpg")
 	background-attachment fixed
 	width 100%
@@ -99,10 +88,13 @@ section
 	
 	
 #profilePhoto
+	display block
 	width 90px
 	height auto
+	text-align center
 	border-radius 10px
 	margin-top 8px
+	margin auto
 	border 1px solid #d4d4d4
 	box-shadow 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
     
@@ -220,3 +212,53 @@ figcaption
 .underline:focus:after
 .underline:active:after
   right: 0;
+
+nav
+	margin:20px auto
+	background:#373737
+	width:80%
+	height:100%
+	left:-100%
+	margin:0
+	position: fixed
+	
+	@media screen and (min-width: 480px)
+		width 60%
+		
+	@media screen and (min-width: 700px)
+		width 40%
+	@media screen and (min-width: 800px)
+		width 20%	
+
+	ul
+		overflow:hidden;
+		list-style:none;
+ 
+		li
+
+			a
+				color:#fff;
+				padding:20px;
+				display:block;
+				text-decoration:none;
+				
+				&:hover
+					background:#171717
+ 				i
+ 					vertical-align middle
+			span
+				margin-right:10px;
+ 
+
+ 
+	nav 
+		ul 
+			li
+		display:block;
+		float:none;
+		border-bottom:1px solid rgba(255,255,255, .3)
+ 
+	#mainHeader 
+		display:block;
+		width:100%;
+		background:#ccc;
