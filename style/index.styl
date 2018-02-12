@@ -1,7 +1,9 @@
-
 @font-face 
-  font-family 'ananda';
-  src url('../fonts/ananda.ttf') format('ttf');
+  font-family 'ananda'
+  src url('../fonts/ananda.ttf') format('ttf')
+
+paintBorder(x)
+	border-left 2px solid x	
 
 body
 	opacity 0.9
@@ -139,6 +141,12 @@ section
 	text-align center
 	header
 		background-color #4CAF50
+	p
+		font-size 0.85rem
+		a
+			color #4CAF50
+			&:hover
+				color #0caf50
 	img
 		display none
 		margin-right 10px
@@ -267,12 +275,9 @@ nav
 		list-style:none;
  
 		li
-			border-left 2px solid transparent
 
-			&:hover
-				*background-color:#171717
-				border-left 2px solid #171717
 			a
+				border-left 2px solid transparent
 				color:#fff
 				padding 20px
 				display block
@@ -285,11 +290,20 @@ nav
 	nav 
 		ul 
 			li
-		display:block;
-		float:none;
-		border-bottom:1px solid rgba(255,255,255, .3)
+		
+#navAbout
+	&:hover
+		paintBorder(#03A9F4)
+#navEdu
+	&:hover
+		paintBorder(#7B1FA2)
+#navSkill
+	&:hover
+		paintBorder(#4CAF50)
+#navPro
+	&:hover
+		paintBorder(#272727)
+#navCon
+	&:hover
+		paintBorder(#F44336)
  
-	#mainHeader 
-		display:block;
-		width:100%;
-		background:#ccc;
