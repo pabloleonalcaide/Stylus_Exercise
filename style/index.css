@@ -33,6 +33,7 @@ main figure img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 #headerTitle {
   display: inline-block;
@@ -41,6 +42,7 @@ main figure img {
 #headerTitle h4 {
   display: inline-block;
   margin-right: 10px;
+  margin-left: 10px;
 }
 #menuLink i {
   font-size: 40px;
@@ -201,6 +203,7 @@ section header i {
 #projects figure {
   display: block;
   width: 30%;
+  vertical-align: top;
   margin: auto;
 }
 @media screen and (min-width: 480px) {
@@ -262,12 +265,9 @@ figcaption:hover::after {
   margin: 5px;
   border-radius: 50px;
   width: 60px;
-  opacity: 0.9;
-  transition: 1s;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .rrssIco:hover {
-  opacity: 1;
   transform: scale(1.1);
 }
 .underline {
@@ -321,17 +321,24 @@ nav ul {
   overflow: hidden;
   list-style: none;
 }
+nav ul li {
+  border-left: 2px solid transparent;
+}
 nav ul li:hover {
-  background-color: #171717;
+  *background-color: #171717;
+  border-left: 2px solid #171717;
 }
 nav ul li a {
   color: #fff;
   padding: 20px;
   display: block;
+  text-decoration: none;
 }
-nav ul li a text-decoration:none {
-i
-  vertical-align: middle;
+@media screen and (min-width: 480px) {
+  nav ul li a {
+    padding: 18px;
+    vertical-align: middle;
+  }
 }
 nav nav {
   display: block;
