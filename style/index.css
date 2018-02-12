@@ -167,6 +167,15 @@ section header i {
 #skills header {
   background-color: #4caf50;
 }
+#skills p {
+  font-size: 0.85rem;
+}
+#skills p a {
+  color: #4caf50;
+}
+#skills p a:hover {
+  color: #0caf50;
+}
 #skills img {
   display: none;
   margin-right: 10px;
@@ -321,14 +330,8 @@ nav ul {
   overflow: hidden;
   list-style: none;
 }
-nav ul li {
-  border-left: 2px solid transparent;
-}
-nav ul li:hover {
-  *background-color: #171717;
-  border-left: 2px solid #171717;
-}
 nav ul li a {
+  border-left: 2px solid transparent;
   color: #fff;
   padding: 20px;
   display: block;
@@ -340,13 +343,18 @@ nav ul li a {
     vertical-align: middle;
   }
 }
-nav nav {
-  display: block;
-  float: none;
-  border-bottom: 1px solid rgba(255,255,255,0.3);
+#navAbout:hover {
+  border-left: 2px solid #03a9f4;
 }
-nav #mainHeader {
-  display: block;
-  width: 100%;
-  background: #ccc;
+#navEdu:hover {
+  border-left: 2px solid #7b1fa2;
+}
+#navSkill:hover {
+  border-left: 2px solid #4caf50;
+}
+#navPro:hover {
+  border-left: 2px solid #272727;
+}
+#navCon:hover {
+  border-left: 2px solid #f44336;
 }
