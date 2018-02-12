@@ -10,35 +10,40 @@
 	<link rel="stylesheet" href="./style/index.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/portfolio.js" type="text/javascript" charset="utf-8"></script>
 	<title>Pablo León</title>
 	
 </head>
 <body>
 	<header id="mainHeader">
-		<a href="#" title="Menu" id="menuLink"><i class="material-icons">menu</i></a>
 		<div id="headerTitle">
 			<h3>Pablo León</h3>
 			<h4>Web Developer</h4>
 		</div>
+		<a href="#" title="Menu" id="menuLink"><i class="material-icons">more_horiz</i></a>
 	</header>
+<nav>
 	<ul id="slide" class="side-nav">
-		<li><a href="#" title="about"><i class="material-icons">menu</i> About Me</a></li>
-		<li><a href="#" title="education"><i class="material-icons">menu</i> Educacion</a></li>
-		<li><a href="#" title="skills"><i class="material-icons">menu</i> Skills</a></li>
-		<li><a href="#" title="proyectos"><i class="material-icons">menu</i> Proyectos</a></li>
-		<li><a href="#" title="contactos"><i class="material-icons">menu</i> Contacto</a></li>
+		<li><a class="navLink" href="#aboutme" title="about"><i class="material-icons">person</i> About Me</a></li>
+		<li><a class="navLink" href="#education" title="education"><i class="material-icons">school</i> Educacion</a></li>
+		<li><a class="navLink" href="#skills" title="skills"><i class="material-icons">tune</i> Skills</a></li>
+		<li><a class="navLink" href="#projects" title="proyectos"><i class="material-icons">assignment_turned_in</i> Proyectos</a></li>
+		<li><a class="navLink" href="#contact" title="contactos"><i class="material-icons">message</i> Contacto</a></li>
 	</ul>
+</nav>
 	<main>
 		<div class="image" id="imageUp">
 			<p>Improve Yourself<br>For Improve the World</p>
 		</div>
 	<section id="aboutme">
 		<header> <h4>About Me</h4> <i class="material-icons">person</i></header>
-	<figure>
 		<img id="profilePhoto" src="./images/profilePhoto.jpg">
-	</figure>
+		<p>¡Hola!</p>
 		<p>Mi nombre es <span class="underline">Pablo</span>, Desarrollo aplicaciones y sitios web</p>
-		<p>Considero que cada uno de éstos es un pequeño paso para ayudar a otros y mejorar todo lo que nos rodea </p>
+		<p>Considero que cada uno de éstos es un pequeño paso para ayudar a otros y mejorar todo lo que nos rodea.</p>
+		<p>¿<a href="#contact">Vamos</a> a por el siguiente paso?</p>
 	</section>
 		<div class="image">
 		</div>	
@@ -58,6 +63,34 @@
 		</ul>
 		<p>Y en mi tiempo libre... Organizador en GDG Córdoba </p><p>¡<i class="material-icons">android</i>!</p>
 	</section>
+	<div class="image">
+	</div>
+
+	<section id="projects">
+		<header>
+			<h4>Proyectos</h4><i class="material-icons">assignment_turned_in</i>
+		</header>
+			<figure>
+				<a href="https://pabloleonalcaide.github.io/Proyecto-Casas-Rurales/">
+				<img src="./images/githubLogo.png">
+				<figcaption>Casas Rurales</figcaption></a>
+			</figure>
+			<figure>
+				<a href="https://github.com/tweepy-sysmana/sysmana2018">
+				<img src="./images/githubLogo.png">
+				<figcaption>Tweepy</figcaption></a>
+			</figure>
+			<figure>
+				<a href="https://pabloleonalcaide.github.io/blog_with_display_grid/">
+				<img src="./images/githubLogo.png">
+				<figcaption>Blog</figcaption></a>
+			</figure>
+			<figure>
+				<a href="https://github.com/pabloleonalcaide/Tienda_Geek">
+				<img src="./images/githubLogo.png">
+				<figcaption>Tienda Juegos</figcaption></a>
+			</figure>
+	</section>
 		<div class="image">
 		</div>
 	<section id="skills">
@@ -70,42 +103,16 @@
 				<li><img src="./images/javascript.svg">Javascript</li>
 				<li><img src="./images/php.svg">PHP</li>
 				<li><img src="./images/python.svg">Python</li>
+				<li><img src="./images/git-logo.svg">Git</li>
 			</ul>
 			<ul>
-				<li><img src="">Git</li>
-				<li><img src="">HTML5&CSS3</li>
-				<li><img src="">jQuery</li>
-				<li><img src="">Symfony</li>
-				<li><img src="">Wordpress</li>
+				<li><img src="./images/sql.svg">PLSQL</li>
+				<li><img src="./images/html5.svg">HTML5&CSS3</li>
+				<li><img src="./images/jquery.svg">jQuery</li>
+				<li><img src="./images/symfony.svg">Symfony</li>
+				<li><img src="./images/wordpress.svg">Wordpress</li>
+				<li><img src="./images/android.svg">Android</li>
 			</ul>
-	</section>
-	<div class="image">
-	</div>
-
-	<section id="projects">
-		<header>
-			<h4>Proyectos</h4><i class="material-icons">assignment_turned_in</i>
-		</header>
-			<figure>
-				<a href="">
-				<img src="./images/githubLogo.png">
-				<figcaption>Proyecto 1</figcaption>	</a>
-			</figure>
-			<figure>
-				<a href="">
-				<img src="./images/githubLogo.png">
-				<figcaption>Proyecto 2</figcaption>	</a>
-			</figure>
-			<figure>
-				<a href="">
-				<img src="./images/githubLogo.png">
-				<figcaption>Proyecto 3</figcaption>	</a>
-			</figure>
-			<figure>
-				<a href="">
-				<img src="./images/githubLogo.png">
-				<figcaption>Proyecto 4</figcaption>	</a>
-			</figure>
 	</section>
 		<div class="image">
 		</div>

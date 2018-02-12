@@ -33,6 +33,7 @@ main figure img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 #headerTitle {
   display: inline-block;
@@ -41,20 +42,10 @@ main figure img {
 #headerTitle h4 {
   display: inline-block;
   margin-right: 10px;
+  margin-left: 10px;
 }
-#slide {
-  position: fixed;
-  top: 0;
-  left: -130px;
-  list-style: none;
-  padding: 0;
-}
-#slide li {
-  margin: 10px;
-  border-bottom: 1px solid #444;
-}
-#slide li:hover {
-  border-left: 1px solid #00f;
+#menuLink i {
+  font-size: 40px;
 }
 .image {
   background-image: url("../images/main.jpg");
@@ -63,7 +54,6 @@ main figure img {
   height: 200px;
   background-size: 100%;
   background-repeat: no-repeat;
-  overflow: scroll;
 }
 #imageUp {
   font-size: 1.2rem;
@@ -77,24 +67,20 @@ section {
   margin: 5px auto;
   font-size: 1.4rem;
   border-radius: 5px;
+  box-shadow: 0 27px 55px 0 rgba(0,0,0,0.3), 0 17px 17px 0 rgba(0,0,0,0.15);
 }
-section box-shadow 0 10px 20px rgba(0,
-section 0,
-section 0.19),
-section 0 6px 6px rgba(0,
-section 0.23) {
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+@media screen and (min-width: 480px) {
+  section {
+    width: 80%;
+  }
 }
-section box-shadow 0 10px 20px rgba(0:hover,
-section 0:hover,
-section 0.19):hover,
-section 0 6px 6px rgba(0:hover,
-section 0.23):hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+@media screen and (min-width: 640px) {
+  section width 40%:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
 }
 section >figure {
   background-attachment: fixed;
-  overflow: scroll;
 }
 section >figure img {
   height: 100%;
@@ -113,15 +99,38 @@ section header i {
   vertical-align: middle;
   text-align: right;
 }
+#aboutme {
+  padding: 5px;
+  margin-top: 0;
+}
 #aboutme header {
   background-color: #03a9f4;
-  color: #212121;
+}
+#aboutme p {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+#aboutme a {
+  color: #252525;
+}
+#aboutme a:hover {
+  color: #03a9f4;
+  text-decoration: underline;
+}
+@media screen and (min-width: 640px) {
+  #aboutme {
+    font-size: 1.5rem;
+    text-align: justify;
+  }
 }
 #profilePhoto {
+  display: block;
   width: 90px;
   height: auto;
+  text-align: center;
   border-radius: 10px;
   margin-top: 8px;
+  margin: auto;
   border: 1px solid #d4d4d4;
 }
 #profilePhoto box-shadow 0 10px 20px rgba(0:hover,
@@ -145,6 +154,7 @@ section header i {
   #education ul {
     display: inline-block;
     margin: 5px;
+    font-size: 1rem;
   }
 }
 .eduList {
@@ -159,12 +169,27 @@ section header i {
 }
 #skills img {
   display: none;
+  margin-right: 10px;
+}
+@media screen and (min-width: 640px) {
+  #skills img {
+    display: inline;
+    width: 50px;
+  }
 }
 #skills ul {
+  padding-left: 0;
   list-style: none;
   display: inline-block;
   font-size: 0.9rem;
   line-height: 1.6;
+  margin-right: 20px;
+}
+@media screen and (min-width: 500px) {
+  #skills ul {
+    margin-right: 50px;
+    line-height: 2;
+  }
 }
 #skills ul li {
   text-align: left;
@@ -177,12 +202,14 @@ section header i {
 }
 #projects figure {
   display: block;
-  width: 40%;
+  width: 30%;
+  vertical-align: top;
   margin: auto;
 }
 @media screen and (min-width: 480px) {
   #projects figure {
     display: inline-block;
+    width: 15%;
   }
 }
 #contact header {
@@ -238,6 +265,10 @@ figcaption:hover::after {
   margin: 5px;
   border-radius: 50px;
   width: 60px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.rrssIco:hover {
+  transform: scale(1.1);
 }
 .underline {
   display: inline;
@@ -261,4 +292,61 @@ figcaption:hover::after {
 .underline:focus:after,
 .underline:active:after {
   right: 0;
+}
+nav {
+  margin: 20px auto;
+  background: #373737;
+  width: 80%;
+  height: 100%;
+  left: -100%;
+  margin: 0;
+  position: fixed;
+}
+@media screen and (min-width: 480px) {
+  nav {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 700px) {
+  nav {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 800px) {
+  nav {
+    width: 20%;
+  }
+}
+nav ul {
+  overflow: hidden;
+  list-style: none;
+}
+nav ul li {
+  border-left: 2px solid transparent;
+}
+nav ul li:hover {
+  *background-color: #171717;
+  border-left: 2px solid #171717;
+}
+nav ul li a {
+  color: #fff;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+}
+@media screen and (min-width: 480px) {
+  nav ul li a {
+    padding: 18px;
+    vertical-align: middle;
+  }
+}
+nav nav {
+  display: block;
+  float: none;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+nav #mainHeader {
+  display: block;
+  width: 100%;
+  background: #ccc;
 }
