@@ -52,7 +52,6 @@ main figure img {
   height: 200px;
   background-size: 100%;
   background-repeat: no-repeat;
-  overflow: scroll;
 }
 #imageUp {
   font-size: 1.2rem;
@@ -66,24 +65,20 @@ section {
   margin: 5px auto;
   font-size: 1.4rem;
   border-radius: 5px;
+  box-shadow: 0 27px 55px 0 rgba(0,0,0,0.3), 0 17px 17px 0 rgba(0,0,0,0.15);
 }
-section box-shadow 0 10px 20px rgba(0,
-section 0,
-section 0.19),
-section 0 6px 6px rgba(0,
-section 0.23) {
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+@media screen and (min-width: 480px) {
+  section {
+    width: 80%;
+  }
 }
-section box-shadow 0 10px 20px rgba(0:hover,
-section 0:hover,
-section 0.19):hover,
-section 0 6px 6px rgba(0:hover,
-section 0.23):hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+@media screen and (min-width: 640px) {
+  section width 40%:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
 }
 section >figure {
   background-attachment: fixed;
-  overflow: scroll;
 }
 section >figure img {
   height: 100%;
@@ -102,9 +97,29 @@ section header i {
   vertical-align: middle;
   text-align: right;
 }
+#aboutme {
+  padding: 5px;
+  margin-top: 0;
+}
 #aboutme header {
   background-color: #03a9f4;
-  color: #212121;
+}
+#aboutme p {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+#aboutme a {
+  color: #252525;
+}
+#aboutme a:hover {
+  color: #03a9f4;
+  text-decoration: underline;
+}
+@media screen and (min-width: 640px) {
+  #aboutme {
+    font-size: 1.5rem;
+    text-align: justify;
+  }
 }
 #profilePhoto {
   display: block;
@@ -137,6 +152,7 @@ section header i {
   #education ul {
     display: inline-block;
     margin: 5px;
+    font-size: 1rem;
   }
 }
 .eduList {
@@ -151,12 +167,27 @@ section header i {
 }
 #skills img {
   display: none;
+  margin-right: 10px;
+}
+@media screen and (min-width: 640px) {
+  #skills img {
+    display: inline;
+    width: 50px;
+  }
 }
 #skills ul {
+  padding-left: 0;
   list-style: none;
   display: inline-block;
   font-size: 0.9rem;
   line-height: 1.6;
+  margin-right: 20px;
+}
+@media screen and (min-width: 500px) {
+  #skills ul {
+    margin-right: 50px;
+    line-height: 2;
+  }
 }
 #skills ul li {
   text-align: left;
@@ -169,12 +200,13 @@ section header i {
 }
 #projects figure {
   display: block;
-  width: 40%;
+  width: 30%;
   margin: auto;
 }
 @media screen and (min-width: 480px) {
   #projects figure {
     display: inline-block;
+    width: 15%;
   }
 }
 #contact header {
@@ -230,6 +262,13 @@ figcaption:hover::after {
   margin: 5px;
   border-radius: 50px;
   width: 60px;
+  opacity: 0.9;
+  transition: 1s;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.rrssIco:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 .underline {
   display: inline;
@@ -282,20 +321,17 @@ nav ul {
   overflow: hidden;
   list-style: none;
 }
+nav ul li:hover {
+  background-color: #171717;
+}
 nav ul li a {
   color: #fff;
   padding: 20px;
   display: block;
-  text-decoration: none;
 }
-nav ul li a:hover {
-  background: #171717;
-}
-nav ul li a:hover i {
+nav ul li a text-decoration:none {
+i
   vertical-align: middle;
-}
-nav ul li span {
-  margin-right: 10px;
 }
 nav nav {
   display: block;

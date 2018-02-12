@@ -19,6 +19,7 @@ function main(){
 		$('nav').animate({
 			left: '-100%'
 		});
+//		$('main').css("opacity","1");
 		$('.underline').css({
             transition : 'color 1s ease-in-out',
                          "color": "#000"
@@ -29,6 +30,7 @@ function main(){
  	$('nav').animate({
 		left: '0'
 	});
+//	$('main').css("opacity","0.6");
 	$('.underline').css({
                 transition : 'color 1s ease-in-out',
                 "color": "#1BB1F5"
