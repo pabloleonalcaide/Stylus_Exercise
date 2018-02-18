@@ -4,7 +4,7 @@
 
 paintBorder(x)
 	border-left 2px solid x	
-
+	color x
 body
 	opacity 0.9
 	font-size 14px
@@ -19,7 +19,54 @@ header
 	background-color #222222
 	margin-bottom 5px
 	
+nav
+	margin:20px auto
+	background:#373737
+	width:80%
+	height:100%
+	left:-100%
+	margin:0
+	position: fixed
+	
+	@media screen and (min-width: 480px)
+		width 60%		
+	@media screen and (min-width: 700px)
+		width 40%
+	@media screen and (min-width: 800px)
+		width 25%	
 
+	ul
+		overflow:hidden;
+		list-style:none;
+ 
+		li
+
+			a
+				border-left 2px solid transparent
+				color:#fff
+				padding 20px
+				display block
+				text-decoration:none
+				@media screen and (min-width: 480px)
+					padding 18px
+ 				i
+					vertical-align middle
+
+#navAbout
+	&:hover
+		paintBorder(#03A9F4)
+#navEdu
+	&:hover
+		paintBorder(#7B1FA2)
+#navSkill
+	&:hover
+		paintBorder(#4CAF50)
+#navPro
+	&:hover
+		paintBorder(#FFA000)
+#navCon
+	&:hover
+		paintBorder(#F44336)
 main	
 	figure
 		margin 0
@@ -36,7 +83,6 @@ main
 	justify-content space-between
 	box-shadow 0 8px 18px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
 
-
 #headerTitle
 	display inline-block
 	h3
@@ -51,7 +97,7 @@ main
 	background-image url("../images/main.jpg")
 	background-attachment fixed
 	width 100%
-	height 200px
+	height 160px
 	background-size 100%
 	background-repeat no-repeat
 #imageUp
@@ -60,13 +106,22 @@ main
 	display flex
 	align-items center
 	justify-content flex-end
+	@media screen and (min-width: 480px)
+		height 30px
+		font-size 1.3rem
+	@media screen and (min-width: 800px)
+		height 480px
+		justify-content center
+		font-size 1.4rem
+	p 	
+		text-shadow: 1px 1px #0288D1
 section
 	width 95%
 	margin 5px auto
-	font-size 1.4rem
+	font-size 1.3rem
 	border-radius 5px
 	box-shadow 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15)
-
+	padding-bottom 5px
 	@media screen and (min-width: 480px)
 		width 80%
 	@media screen and (min-width: 800px)
@@ -94,6 +149,7 @@ section
 	padding 5px
 	margin-top 0
 	header
+		margin 0
 		background-color #03A9F4
 	p
 		margin-top 18px
@@ -104,14 +160,14 @@ section
 			color #03A9F4
 			text-decoration underline
 	@media screen and (min-width: 640px)
-		font-size 1.3rem
+		font-size 1.2rem
 	
 #profilePhoto
 	display block
 	width 90px
 	height auto
 	text-align center
-	border-radius 10px
+	border-radius 50px
 	margin-top 8px
 	margin auto
 	border 1px solid #d4d4d4
@@ -136,7 +192,7 @@ section
 .eduList
 	list-style none
 	padding-left 0
-	
+	line-height 1.6
 #skills
 	text-align center
 	header
@@ -159,12 +215,14 @@ section
 		list-style none
 		display inline-block
 		font-size 0.9rem
-		line-height 1.6
+		line-height 1.8
 		margin-right 20px
 		@media screen and (min-width: 500px)	
-			margin-right 50px
+			margin-right 30px
+			margin-left 30px
 			line-height 2
 		li
+			
 			text-align left
 			&:nth-child(odd)
 				color #828282
@@ -172,6 +230,8 @@ section
 	text-align center
 	p
 		font-size 0.8rem
+	header
+		background-color #FFA000
 	figure
 		display block
 		width 30%
@@ -229,11 +289,12 @@ figcaption
 	grid-template-columns 60px 60px
 	justify-content space-around
 .rrssIco
+	fill #000
 	margin 5px
 	border-radius 50px
 	width 60px
 	box-shadow 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
-
+	transition 2s ease-out
 	&:hover
 		transform scale(1.1)
 .underline
@@ -258,57 +319,8 @@ figcaption
 .underline:focus:after
 .underline:active:after
   right: 0;
+  
 
-nav
-	margin:20px auto
-	background:#373737
-	width:80%
-	height:100%
-	left:-100%
-	margin:0
-	position: fixed
-	
-	@media screen and (min-width: 480px)
-		width 60%		
-	@media screen and (min-width: 700px)
-		width 40%
-	@media screen and (min-width: 800px)
-		width 20%	
-
-	ul
-		overflow:hidden;
-		list-style:none;
- 
-		li
-
-			a
-				border-left 2px solid transparent
-				color:#fff
-				padding 20px
-				display block
-				text-decoration:none
-				@media screen and (min-width: 480px)
-					padding 18px
- 				i
-					vertical-align middle
-
-	nav 
-		ul 
-			li
-		
-#navAbout
-	&:hover
-		paintBorder(#03A9F4)
-#navEdu
-	&:hover
-		paintBorder(#7B1FA2)
-#navSkill
-	&:hover
-		paintBorder(#4CAF50)
-#navPro
-	&:hover
-		paintBorder(#272727)
-#navCon
-	&:hover
-		paintBorder(#F44336)
- 
+#prueba
+	height: 20px
+	width: 50%

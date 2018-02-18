@@ -6,7 +6,6 @@ function main(){
 	$('#menuLink').click(function(event){
 		event.preventDefault();
           $(this).hide().show("slide", { direction: "left" }, 1000);
-//		$(this).slideUp(400).delay(1000).slideDown(400);
 		if(contador){
 			mostrar();
 		} else {
