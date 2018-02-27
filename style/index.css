@@ -8,15 +8,19 @@ body {
   font-family: ananda;
   display: grid;
   grid-template-columns: 100%;
+  background-color: #f0f0f0;
 }
 a {
   text-decoration: none;
-  color: #c4c4c4;
+  color: #0288d1;
 }
 header {
   color: #f4f4f4;
   background-color: #222;
   margin-bottom: 5px;
+}
+header a {
+  color: #f4f4f4;
 }
 nav {
   margin: 20px auto;
@@ -46,6 +50,11 @@ nav ul {
   overflow: hidden;
   list-style: none;
 }
+@media screen and (min-width: 800px) {
+  nav ul {
+    padding: 0;
+  }
+}
 nav ul li a {
   border-left: 2px solid transparent;
   color: #fff;
@@ -59,6 +68,7 @@ nav ul li a {
     vertical-align: middle;
   }
 }
+#navArt:hover,
 #navAbout:hover {
   border-left: 2px solid #03a9f4;
   color: #03a9f4;
@@ -155,7 +165,7 @@ section {
 }
 @media screen and (min-width: 800px) {
   section {
-    width: 60%;
+    width: 70%;
   }
   section background-color red:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -182,19 +192,17 @@ section header i {
   text-align: right;
 }
 #aboutme {
-  padding: 12px;
-  margin-top: 0;
+  margin-top: 10px;
 }
 #aboutme header {
   margin: 0;
   background-color: #03a9f4;
 }
 #aboutme p {
-  margin-top: 18px;
-  margin-bottom: 18px;
+  margin: 18px 10px 18px 10px;
 }
 #aboutme a {
-  color: #252525;
+  color: #212121;
 }
 #aboutme a:hover {
   color: #03a9f4;
@@ -214,13 +222,7 @@ section header i {
   margin: auto;
   margin-top: 10px;
   border: 1px solid #d4d4d4;
-}
-#profilePhoto box-shadow 0 10px 20px rgba(0:hover,
-#profilePhoto 0:hover,
-#profilePhoto 0.19):hover,
-#profilePhoto 0 6px 6px rgba(0:hover,
-#profilePhoto 0.23):hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 2px 2px rgba(0,0,0,0.3);
 }
 #education {
   text-align: center;
@@ -301,7 +303,7 @@ section header i {
 }
 #projects figure {
   display: block;
-  width: 60%;
+  width: 75%;
   vertical-align: top;
   margin: auto;
 }
@@ -312,7 +314,8 @@ section header i {
 }
 @media screen and (min-width: 800px) {
   #projects figure {
-    width: 40%;
+    width: 45%;
+    margin: 10px;
   }
 }
 #projects figure img:hover {
@@ -338,12 +341,23 @@ section header i {
     font-size: 1rem;
   }
 }
-#articles ul li a {
-  color: #00bcd4;
+#articles ul li a color #0288D1 {
+  display: inline-block;
+  text-decoration: none;
 }
 #articles ul li a:hover {
-  color: #0288d1;
-  text-decoration: underline;
+  color: #000fff;
+}
+#articles ul li a::after {
+  content: '	';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #0288d1;
+  transition: width 0.3s;
+}
+#articles ul li a:hover::after {
+  width: 100%;
 }
 #contact p {
   font-size: 0.8rem;
@@ -355,9 +369,11 @@ section header i {
 footer {
   text-align: center;
   background-color: #222;
+  color: #f4f4f4;
 }
 footer #arrow {
   display: block;
+  color: #f4f4f4;
   transition: 1s;
   width: 100%;
   margin-bottom: 10px;
@@ -370,6 +386,9 @@ footer #arrow i {
   padding-top: 10px;
   border-radius: 50px;
   background: linear-gradient(#444, #222);
+}
+footer a {
+  color: #f4f4f4;
 }
 figcaption {
   font-size: 14px;
@@ -398,8 +417,18 @@ figcaption:hover::after {
   grid-template-columns: 60px 60px;
   justify-content: space-around;
 }
+@media screen and (min-width: 800px) {
+  #rrss {
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 800px) {
+  #rrss {
+    justify-content: space-around;
+    grid-template-columns: repeat(4, 60px);
+  }
+}
 .rrssIco {
-  fill: #000;
   margin: 5px;
   border-radius: 50px;
   width: 60px;
@@ -408,6 +437,7 @@ figcaption:hover::after {
 }
 .rrssIco:hover {
   transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 16px 16px rgba(0,0,0,0.23);
 }
 .underline {
   display: inline;
@@ -431,4 +461,16 @@ figcaption:hover::after {
 .underline:focus:after,
 .underline:active:after {
   right: 0;
+}
+/* */
+#license {
+  margin-top: 60px;
+}
+#license header {
+  background-color: #d32f2f;
+}
+#license ul {
+  font-size: 0.9rem;
+  list-style: none;
+  line-height: 1.75;
 }

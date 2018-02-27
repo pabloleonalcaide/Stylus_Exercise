@@ -27,11 +27,12 @@
 	</header>
 <nav>
 	<ul id="slide" class="side-nav">
-		<li><a class="navLink" id="navAbout" href="#aboutme" title="about"><i class="material-icons">person</i> About Me</a></li>
-		<li><a class="navLink" id="navEdu" href="#education" title="education"><i class="material-icons">school</i> Certifications</a></li>
-		<li><a class="navLink" id="navSkill" href="#skills" title="skills"><i class="material-icons">tune</i> Skills</a></li>
-		<li><a class="navLink" id="navPro" href="#projects" title="proyectos"><i class="material-icons">assignment_turned_in</i> Projects</a></li>
-		<li><a class="navLink" id="navCon" href="#contact" title="contactos"><i class="material-icons">message</i> Contact</a></li>
+		<li><a class="navLink" id="navAbout" href="#imageUp" title="about"><i class="material-icons">person</i> About Me</a></li>
+		<li><a class="navLink" id="navEdu" href="#educationHeader" title="education"><i class="material-icons">school</i> Certifications</a></li>
+		<li><a class="navLink" id="navSkill" href="#skillsHeader" title="skills"><i class="material-icons">tune</i> Skills</a></li>
+		<li><a class="navLink" id="navPro" href="#projectHeader" title="projects"><i class="material-icons">assignment_turned_in</i> Projects</a></li>
+		<li><a class="navLink" id="navArt" href="#articlesHeader" title="articles"><i class="material-icons">library_books</i> Articles</a></li>
+		<li><a class="navLink" id="navCon" href="#contactHeader" title="contacts"><i class="material-icons">message</i> Contact</a></li>
 	</ul>
 </nav>
 	<main>
@@ -46,7 +47,7 @@
 		<p>I consideer that every project is a little step to improve everything around us.</p>
 		<p><a href="#contact">Let's go</a> to the next step?</p>
 	</section>
-		<div class="image">
+		<div id="educationHeader" class="image">
 		</div>	
 	<section id="education">
 		<header>
@@ -65,8 +66,7 @@
 		</ul>
 		
 	</section>
-	<div class="image">
-	</div>
+	<div class="image" id="projectHeader"></div>
 
 	<section id="projects">
 		<header>
@@ -75,26 +75,26 @@
 		<p>Cause I'm allways unto the breach..</p>
 			<figure>
 				<a href="https://pabloleonalcaide.github.io/Proyecto-Casas-Rurales/">
-				<img src="./images/casas.png">
+				<img src="./images/casas.png" alt="enlace proyecto casas">
 				<figcaption>Casas Rurales</figcaption></a>
 			</figure>
 			<figure>
 				<a href="https://github.com/tweepy-sysmana/sysmana2018">
-				<img src="./images/tweepy.png">
+				<img src="./images/tweepy.png" alt="enlace proyecto tweepy">
 				<figcaption>Tweepy</figcaption></a>
 			</figure>
 			<figure>
 				<a href="https://pabloleonalcaide.github.io/blog_with_display_grid/">
-				<img src="./images/blog.png">
+				<img src="./images/blog.png" alt="enlace proyecto blog">
 				<figcaption>Blog</figcaption></a>
 			</figure>
 			<figure>
 				<a href="https://pabloleonalcaide.github.io/Javascript_2_Trimestre/mastermind%20usando%20jQuery/">
-				<img src="./images/mastermind.png">
+				<img src="./images/mastermind.png" alt="enlace proyecto mastermind">
 				<figcaption>Mastermind</figcaption></a>
 			</figure>
 	</section>
-		<div class="image">
+		<div id="skillsHeader" class="image">
 		</div>
 	<section id="skills">
 		<header>
@@ -120,7 +120,7 @@
 			<p><i class="material-icons">android</i></p>
 			<p>...and write in <a href="https://medium.com/@PabloLeonPsi"> Medium</a>
 	</section>
-			<div class="image">
+			<div id="articlesHeader" class="image">
 		</div>	
 	<section id="articles">
 		<header>
@@ -136,7 +136,7 @@
 		</ul>
 		
 	</section>
-		<div class="image">
+		<div class="image" id="contactHeader">
 		</div>
 	<section id="contact">
 		<header>
@@ -144,16 +144,16 @@
 		</header>
 		<p> Now you know how to find me..</p>
 			<div id="rrss">
-				<a href="http://www.github.com/pabloleonalcaide"><img class="rrssIco" src="./images/github.svg"></a>
-				<a href="https://www.linkedin.com/in/pablo-leon-alcaide/"><img class="rrssIco" src="./images/linkedin.svg"></a>
-				<a href="https://twitter.com/PabloLeonPsi"><img class="rrssIco" src="./images/twitter.svg"></a>
-				<a href="mailto:pabloleonpsi@gmail.com?subject=Contact"><img class="rrssIco" src="./images/gmail.svg"></a>
+				<a href="http://www.github.com/pabloleonalcaide" title="github"><img class="rrssIco" src="./images/github.svg" alt="github logo"></a>
+				<a href="https://www.linkedin.com/in/pablo-leon-alcaide/" title="linkedin"><img class="rrssIco" src="./images/linkedin.svg" alt="linkedin logo"></a>
+				<a href="https://twitter.com/PabloLeonPsi" title="twitter"><img class="rrssIco" src="./images/twitter.svg" alt="twitter logo"></a>
+				<a href="https://telegram.me/PabloLeonPsico" title="@PabloLeonPsico"><img class="rrssIco" src="./images/telegram.svg" alt ="telegram logo"></a>
 			</div>
 	</section>	
 	</main>
 	<footer>
 			<a id="arrow" href="#" title="Subir"><i class="material-icons">home</i></a>
-			<span>&#169 2018 Pablo León Alcaide</span>
+			<span>&#169 2018 Pablo León Alcaide | <a href="./license.html" id="licencia">License</a></span>
 	</footer>
 </body>
 </html>
