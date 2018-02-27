@@ -11,14 +11,16 @@ body
 	font-family ananda
 	display grid
 	grid-template-columns 100%
+	background-color #f0f0f0
 a
 	text-decoration none
-	color #c4c4c4
+	color #0288D1
 header
 	color #f4f4f4
 	background-color #222222
 	margin-bottom 5px
-	
+	a
+		color #f4f4f4
 nav
 	margin:20px auto
 	background:#373737
@@ -34,11 +36,13 @@ nav
 		width 40%
 	@media screen and (min-width: 800px)
 		width 20%	
-
+		
 	ul
 		overflow:hidden;
 		list-style:none;
- 
+		@media screen and (min-width: 800px)
+			padding 0
+	
 		li
 
 			a
@@ -51,7 +55,7 @@ nav
 					padding 18px
  				i
 					vertical-align middle
-
+#navArt
 #navAbout
 	&:hover
 		paintBorder(#03A9F4)
@@ -126,7 +130,7 @@ section
 	@media screen and (min-width: 480px)
 		width 80%
 	@media screen and (min-width: 800px)
-		width 60%
+		width 70%
 		background-color red
     &:hover
     	 box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
@@ -147,16 +151,15 @@ section
 			vertical-align middle
 			text-align right	
 #aboutme
-	padding 12px
-	margin-top 0
+	margin-top 10px
+    
 	header
 		margin 0
 		background-color #03A9F4
 	p
-		margin-top 18px
-		margin-bottom 18px
+		margin 18px 10px 18px 10px
 	a
-		color #252525
+		color #212121
 		&:hover
 			color #03A9F4
 			text-decoration underline
@@ -172,10 +175,7 @@ section
 	margin auto
 	margin-top 10px
 	border 1px solid #d4d4d4
-	box-shadow 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
-    
-    &:hover
-    	 box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+	box-shadow: 2px 2px rgba(0,0,0,0.3);
 #education
 	text-align center
 	header
@@ -235,16 +235,18 @@ section
 		background-color #FFA000
 	figure
 		display block
-		width 60%
+		width 75%
 		vertical-align top
 		margin auto
 		@media screen and (min-width: 480px)
 			display inline-block	
 		@media screen and (min-width: 800px)
-			width 40%
+			width 45%
+			margin 10px
 		img 
 			&:hover
 				box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+			
 #articles
 	text-align center
 	header
@@ -260,10 +262,21 @@ section
 			font-size 1rem
 		li
 			a
-				color #00BCD4
+				color #0288D1
+			    display: inline-block
+			    text-decoration: none
 				&:hover
-					color #0288D1
-					text-decoration underline
+			    	color: #000fff
+				&::after
+				    content: '	'
+				    display: block
+				    width: 0
+				    height: 2px
+				    background: #0288D1
+				    transition: width .3s
+
+				&:hover::after
+			    	width: 100%
 #contact
 	p
 		font-size 0.8rem
@@ -273,8 +286,10 @@ section
 footer
 	text-align center
 	background-color #222222
+	color #f4f4f4
 	#arrow
 		display block
+		color #f4f4f4
 		transition 1s
 		width 100%
 		margin-bottom 10px
@@ -285,9 +300,10 @@ footer
 			padding-top 10px
 			border-radius 50px
 			background linear-gradient(#444444, #222222 )
+	a
+		color #f4f4f4
 
 // EFECTOS
-
 figcaption 
 	font-size 14px
 	color #0288D1
@@ -310,8 +326,13 @@ figcaption
 	display grid
 	grid-template-columns 60px 60px
 	justify-content space-around
+	@media screen and (min-width: 800px)
+		justify-content space-between
+	@media screen and (min-width: 800px)
+		justify-content space-around
+		grid-template-columns repeat(4,60px)
+
 .rrssIco
-	fill #000
 	margin 5px
 	border-radius 50px
 	width 60px
@@ -319,6 +340,7 @@ figcaption
 	transition 2s ease-out
 	&:hover
 		transform scale(1.1)
+		box-shadow 0 10px 20px rgba(0,0,0,0.19), 0 16px 16px rgba(0,0,0,0.23)
 .underline
   display: inline
   position: relative
@@ -341,4 +363,12 @@ figcaption
 .underline:focus:after
 .underline:active:after
   right: 0;
- 
+ /* */
+ #license
+ 	margin-top 60px
+ 	header
+ 		background-color #D32F2F
+ 	ul
+ 		font-size 0.9rem
+ 		list-style none
+ 		line-height 1.75
